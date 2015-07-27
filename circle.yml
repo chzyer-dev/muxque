@@ -5,6 +5,6 @@ test:
     - go get -u github.com/chzyer/muxque/...
     - go get golang.org/x/tools/cmd/cover
   override:
-    - go test -v -cover -race -coverprofile=/home/ubuntu/coverage.out github.com/chzyer/muxque/topic
+    - env TEST_ROOT=$HOME/test go test -v -cover -race -coverprofile=/home/ubuntu/coverage.out github.com/chzyer/muxque/topic
   post:
     - /home/ubuntu/bin/goveralls -coverprofile=/home/ubuntu/coverage.out -service=circle-ci
