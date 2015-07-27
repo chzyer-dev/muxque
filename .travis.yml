@@ -5,12 +5,12 @@ go:
   - 1.4
 before_install:
   - mkdir $TEST_ROOT
-  - go get gopkg.in/logex.v1
-  - go get github.com/axw/gocov/gocov
-  - go get github.com/mattn/goveralls
-  - go get golang.org/x/tools/cmd/cover
-  - go get github.com/chzyer/adrs
-  - mkdir ../../chzyer/
+  - go get -u gopkg.in/logex.v1
+  - go get -u github.com/axw/gocov/gocov
+  - go get -u github.com/mattn/goveralls
+  - go get -u golang.org/x/tools/cmd/cover
+  - go get -u github.com/chzyer/adrs
+  - mkdir -p ../../chzyer/
   - cp -r ../muxque ../../chzyer/muxque
 script:
   - ./goverall.sh
