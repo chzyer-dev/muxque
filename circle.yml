@@ -2,8 +2,8 @@ test:
   pre:
     - go get github.com/axw/gocov/gocov
     - go get github.com/mattn/goveralls
-    - go get -u github.com/chzyer/muxque
-    - if ! go get code.google.com/p/go.tools/cmd/cover; then go get golang.org/x/tools/cmd/cover; fi
+    - go get -u github.com/chzyer/muxque/...
+    - go get golang.org/x/tools/cmd/cover
   override:
     - go test -v -cover -race -coverprofile=/home/ubuntu/coverage.out github.com/chzyer/muxque/topic
   post:
